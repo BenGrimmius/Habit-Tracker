@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		16E7786D2DC5523F0062A82B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 16E7786C2DC552330062A82B /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		16ADC4042DC54F8300D8F908 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		16ADC3F32DC54F8100D8F908 /* Habit-Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Habit-Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16ADC4032DC54F8300D8F908 /* Habit-TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Habit-TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16ADC40D2DC54F8300D8F908 /* Habit-TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Habit-TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		16E7786C2DC552330062A82B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +80,7 @@
 		16ADC3EA2DC54F8000D8F908 = {
 			isa = PBXGroup;
 			children = (
+				16E7786C2DC552330062A82B /* README.md */,
 				16ADC3F52DC54F8100D8F908 /* Habit-Tracker */,
 				16ADC4062DC54F8300D8F908 /* Habit-TrackerTests */,
 				16ADC4102DC54F8300D8F908 /* Habit-TrackerUITests */,
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16E7786D2DC5523F0062A82B /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
