@@ -4,7 +4,6 @@
 //
 //  Created by Ben Grimmius on 5/2/25.
 //
-
 import Foundation
 import SwiftData
 
@@ -24,7 +23,7 @@ class Habit {
         .init(name: "Drink water", completedToday: true, dateCreated: Date()),
         .init(name: "Meditate", completedToday: false, dateCreated: Date()),
         .init(name: "Read", completedToday: true, dateCreated: Date()),
+        .init(name: "Exercise", completedToday: false, dateCreated: Date())
     ]
+    
 }
-
-
