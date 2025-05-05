@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @MainActor
-struct SampleData {
+class SampleData {
     static let shared = SampleData()
     
     let modelContainer: ModelContainer
@@ -25,5 +25,35 @@ struct SampleData {
     var habit: Habit {
         Habit.sampleData.first!
     }
+    
+    private init() {
+        let schema = Schema([
+            Friend.self,
+            Habit.self
+        ])
+        
+        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: true)
+        
+        do {
+            modelContainer = try ModelContainer(for: schema, configurations: [modelConfiguration])
+            
+            insertSampleData()
+            
+            try context.save()
+            
+        } catch {
+            fatalError("Could not build model for the container \(error)")
+        }
+    }
+    
+    func insertSampleData() {
+        for friend in Friend.sampleData {
+            context.insert(friend)
+        }
+        for habit in Habit.sampleData {
+            context.insert(habit)
+        }
+    }
+    
     
 }
