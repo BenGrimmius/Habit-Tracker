@@ -6,17 +6,31 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct Friend_List: View {
+    @Query(sort: \Friend.name) private var friends: [Friend]
+    @Environment(\.modelContext) private var context: ModelContext
+    
     var body: some View {
-        VStack {
-            List(Friend.sampleData) { friend in
-                Text(friend.name)
+        NavigationSplitView {
+            Group {
+                if !friends.isEmpty {
+                    List {
+                        ForEach(friends) { friend in
+                            NavigationLink(friend.name) {
+                                Habit_List(for: friend)
+                            }
+                        }
+                    }
+                }
             }
+            .navigationTitle("Friends")
         }
     }
 }
 
 #Preview {
     Friend_List()
+        .modelContainer(SampleData.shared.modelContainer)
 }
