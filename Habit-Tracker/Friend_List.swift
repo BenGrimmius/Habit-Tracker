@@ -13,21 +13,17 @@ struct Friend_List: View {
     @Environment(\.modelContext) private var context: ModelContext
     
     var body: some View {
-        NavigationSplitView {
             Group {
                 if !friends.isEmpty {
                     List {
                         ForEach(friends) { friend in
-                            NavigationLink(friend.name) {
-                                Habit_List(for: friend)
-                            }
+                            Text(friend.name)
                         }
                     }
                 }
             }
             .navigationTitle("Friends")
         }
-    }
 }
 
 #Preview {
