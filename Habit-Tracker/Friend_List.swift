@@ -23,7 +23,17 @@ struct Friend_List: View {
                 }
             }
             .navigationTitle("Friends")
+            .toolbar {
+                ToolbarItem {
+                    Button("Add", systemImage: "plus", action: addFriend)
+                }
+            }
         }
+    
+    private func addFriend() {
+        let newFriend = Friend(name: "", habits: [])
+        context.insert(newFriend)
+    }
 }
 
 #Preview {
